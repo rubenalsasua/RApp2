@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    {% if proyecto %}
+        <ul>
+            <li>
+                <h2>{{ proyecto.nombre }}</h2>
+                <p>{{ proyecto.descripcion }}</p>
+                <p>Fecha límite: {{ proyecto.fecha_limite }}</p>
+                <p>Creado: {{ proyecto.created_at }}</p>
+                <p>Modificado: {{ proyecto.updated_at }}</p>
+                <p>{{ proyecto.prioridad }}</p>
+                <p>{{ proyecto.estado }}</p>
+            </li>
+        </ul>
+        <div>
+            <a href="{{ proyecto.id }}/update">Actualizar</a>
+            <a href="{{ proyecto.id }}/delete">Borrar</a>
+        </div>
+    {% else %}
+        <p>No hay proyecto</p>
+    {% endif %}
+{% endblock %}
