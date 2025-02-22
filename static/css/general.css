@@ -1,0 +1,148 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo oscuro y texto claro */
+body {
+    background-color: #000b32;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding-bottom: 60px; /* Espacio para el footer */
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Links */
+a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botones */
+button {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* Listas */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid #444;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #1f1f1f;
+    color: #bb86fc;
+    font-weight: bold;
+}
+
+td {
+    background-color: #222;
+}
+
+/* Formularios */
+form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select, textarea {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Footer fijo abajo */
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para los enlaces del footer */
+.footer-nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer-nav a:hover {
+    color: #bb86fc;
+    transform: scale(1.1);
+}

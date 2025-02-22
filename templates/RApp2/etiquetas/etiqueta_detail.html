@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block contenido %}
+    {% if etiqueta %}
+        <h2>Etiqueta: {{ etiqueta.nombre }}</h2>
+        <p>Proyectos asociados:</p>
+        <ul>
+            {% for proyecto in etiqueta.proyecto.all %}
+                <li>{{ proyecto.nombre }}</li>
+            {% endfor %}
+        </ul>
+        <div>
+            <a href="{% url 'etiqueta-update' etiqueta.id %}">Actualizar</a>
+            <a href="{% url 'etiqueta-delete' etiqueta.id %}">Borrar</a>
+        </div>
+    {% else %}
+        <p>No hay etiquetas.</p>
+    {% endif %}
+{% endblock %}

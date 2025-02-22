@@ -6,6 +6,9 @@ class ProyectoForm(forms.ModelForm):
     class Meta:
         model = Proyecto
         fields = '__all__'
+        widgets = {
+            'fecha_limite': forms.DateTimeInput(attrs={'type': 'datetime-local'}),
+        }
 
 
 class EtiquetaForm(forms.ModelForm):

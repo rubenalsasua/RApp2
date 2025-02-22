@@ -1,19 +1,23 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RApp2</title>
+    <link rel="stylesheet" href="{% static 'css/general.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'images/iconoRApp2.png' %}">
+
 </head>
 <body>
 <div>
     {% block contenido %}
     {% endblock %}
 </div>
-<footer>
-    <nav>
-        <a href="/RApp2/">Inicio</a>
-        <a href="/RApp2/proyectos">Proyectos</a>
-    </nav>
+<footer class="footer-nav">
+    <a href="{% url 'index' %}">🏠 Inicio</a>
+    <a href="{% url 'proyectos-list' %}">🏗️ Proyectos</a>
+    <a href="{% url 'etiquetas-list' %}">🏷️ Etiquetas</a>
 </footer>
 </body>
 </html>

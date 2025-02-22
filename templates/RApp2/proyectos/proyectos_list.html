@@ -15,7 +15,7 @@
             {% for proyecto in proyectos %}
                 <tr>
                     <td>
-                        <a href="/RApp2/proyectos/{{ proyecto.id }}">{{ proyecto.nombre }}</a>
+                        <a href="{% url 'proyecto-detail' proyecto.id %}">{{ proyecto.nombre }}</a>
                     </td>
                     <td>{{ proyecto.descripcion }}</td>
                     <td>{{ proyecto.fecha_limite }}</td>
@@ -29,6 +29,6 @@
             <p>No hay proyectos.</p>
         {% endif %}
     <div>
-        <a href="/RApp2/proyectos/create">Nuevo proyecto</a>
+        <a href="{% url 'proyecto-create' %}">Nuevo proyecto</a>
     </div>
 {% endblock %}
