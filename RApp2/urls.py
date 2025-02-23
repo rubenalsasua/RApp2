@@ -3,6 +3,9 @@ from RApp2 import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path("registro/", views.registro, name="registro"),
+    path("login/", views.iniciar_sesion, name="login"),
+    path("logout/", views.cerrar_sesion, name="logout"),
     path('proyectos', views.ProyectoListView.as_view(), name='proyectos-list'),
     path('proyectos/<int:pk>', views.ProyectoDetailView.as_view(), name='proyecto-detail'),
     path('proyectos/<int:pk>/update', views.ProyectoUpdateView.as_view(), name='proyecto-update'),

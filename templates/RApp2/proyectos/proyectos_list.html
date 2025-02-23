@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block contenido %}
+    <h2>Lista de proyectos</h2>
     <table>
         <thead>
         <tr>
@@ -8,6 +9,7 @@
             <th>Límite</th>
             <th>Prioridad</th>
             <th>Estado</th>
+            <th>Etiquetas</th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +23,7 @@
                     <td>{{ proyecto.fecha_limite }}</td>
                     <td>{{ proyecto.prioridad }}</td>
                     <td>{{ proyecto.estado }}</td>
+                    <td>{{ proyecto.etiqueta }}</td>
                 </tr>
                 </tbody>
             {% endfor %}
@@ -29,6 +32,9 @@
             <p>No hay proyectos.</p>
         {% endif %}
     <div>
-        <a href="{% url 'proyecto-create' %}">Nuevo proyecto</a>
+        <button>
+            <a href="{% url 'proyecto-create' %}">Nuevo proyecto</a>
+        </button>
+
     </div>
 {% endblock %}

@@ -7,10 +7,11 @@
 
 /* Fondo oscuro y texto claro */
 body {
-    background-color: #000b32;
+    background-color: #000923;
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     padding-bottom: 60px; /* Espacio para el footer */
+    margin: 20px
 }
 
 /* Contenedor principal */
@@ -23,13 +24,13 @@ body {
 
 /* Links */
 a {
-    color: #bb86fc;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    margin: 20px;
 }
 
 a:hover {
-    text-decoration: underline;
+
 }
 
 /* Botones */
@@ -54,8 +55,9 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 68px;
     text-align: center;
+    margin: 10px;
 }
 
 h2 {
@@ -93,8 +95,8 @@ th, td {
 }
 
 th {
-    background-color: #1f1f1f;
-    color: #bb86fc;
+    background-color: rgb(0, 11, 50);
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -119,30 +121,123 @@ input, select, textarea {
     margin-bottom: 10px;
 }
 
-/* Footer fijo abajo */
 .footer-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1f1f1f;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.1);
+    display: none;
 }
 
-/* Estilos para los enlaces del footer */
-.footer-nav a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 15px 20px;
-    margin: 0 10px;
+.header-nav {
+    bottom: 20px;
+    width: 100%;
+    background-color: rgb(0, 13, 41);
+    padding: 15px 19px;
+    box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.1);
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    /* Footer fijo abajo */
+    .footer-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #1f1f1f;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Estilos para los enlaces del footer */
+    .footer-nav a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 15px 20px;
+        margin: 0 10px;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .footer-nav a:hover {
+        color: rgba(255, 255, 255, 0.86);
+        transform: scale(1.4);
+    }
+
+    .header-nav {
+        display: none;
+    }
+}
+
+/* Estilos generales para los botones */
+button, .btn {
     display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.footer-nav a:hover {
-    color: #bb86fc;
-    transform: scale(1.1);
+/* Botón principal (Ejemplo: Crear, Guardar) */
+.btn-primary {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Botón secundario (Ejemplo: Cancelar, Volver) */
+.btn-secondary {
+    background-color: #555; /* Gris oscuro */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+/* Botón de advertencia (Ejemplo: Eliminar, Resetear) */
+.btn-danger {
+    background-color: #d9534f; /* Rojo */
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Botón de información (Ejemplo: Ver más detalles) */
+.btn-info {
+    background-color: #5bc0de; /* Azul */
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #31b0d5;
+}
+
+/* Botón deshabilitado */
+.btn:disabled, .btn-disabled {
+    background-color: #777;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Ajuste para botones en formularios */
+input[type="submit"], input[type="button"] {
+    width: auto;
+}
+
+/* Botón ancho para pantallas pequeñas */
+@media (max-width: 600px) {
+    .btn {
+        width: 100%;
+        padding: 14px;
+    }
 }

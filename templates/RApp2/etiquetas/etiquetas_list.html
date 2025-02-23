@@ -1,15 +1,30 @@
 {% extends 'base.html' %}
 {% block contenido %}
-    {% if etiquetas %}
-        {% for etiqueta in etiquetas %}
-            <li>
-                <a href="{% url 'etiqueta-detail' etiqueta.id %}">{{ etiqueta.nombre }}</a>
-            </li>
-        {% endfor %}
-    {% else %}
-        <p>No hay etiquetas.</p>
-    {% endif %}
+    <h2>Lista de etiquetas</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Etiqueta</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if etiquetas %}
+            {% for etiqueta in etiquetas %}
+                <tr>
+                    <td>
+                        <a href="{% url 'etiqueta-detail' etiqueta.id %}">{{ etiqueta.nombre }}</a>
+                    </td>
+                </tr>
+                </tbody>
+            {% endfor %}
+            </table>
+        {% else %}
+            <p>No hay etiquetas.</p>
+        {% endif %}
     <div>
-        <a href="{% url 'etiqueta-create' %}">Nueva etiqueta</a>
+        <button>
+            <a href="{% url 'etiqueta-create' %}">Nueva etiqueta</a>
+        </button>
+
     </div>
 {% endblock %}
