@@ -10,15 +10,15 @@
 
 </head>
 <body>
-<header class="header-nav">
+<header>
     <a href="{% url 'index' %}">Inicio</a>
-    <a href="{% url 'proyectos-list' %}">Proyectos</a>
-    <a href="{% url 'etiquetas-list' %}">Etiquetas</a>
     {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}" class="btn btn-danger">Cerrar sesión</a>
+        <a href="{% url 'proyectos-list' %}">Proyectos</a>
+        <a href="{% url 'etiquetas-list' %}">Etiquetas</a>
+        <a style="float:right" href="{% url 'logout' %}">Cerrar sesión</a>
     {% else %}
-        <a href="{% url 'login' %}" class="btn btn-primary">Iniciar sesión</a>
-        <a href="{% url 'registro' %}" class="btn btn-secondary">Registrarse</a>
+        <a style="float:right" href="{% url 'login' %}">Iniciar sesión</a>
+        <a style="float:right" href="{% url 'registro' %}">Registrarse</a>
     {% endif %}
 </header>
 <div>
